@@ -198,22 +198,23 @@
         <img class="wallet-image" src="wallet_on_stand.png" alt="Wallet on stand">
     </section>
 
-    <section id="product" class="product-context" style="background:#f4f0e6; padding: 60px 20px; text-align: center;">
-        <h2 style="font-family: 'Playfair Display', serif; color: #1a4d3d; font-size: 2.5rem; margin-bottom: 20px;">Where Nature Meets Craftsmanship</h2>
-        <p style="font-size: 1.1rem; color: #333; max-width: 800px; margin: 0 auto 30px;">Imagine a wallet that not only complements your style but also honors the planet. The Marc Wellington Wallet, with its unique woven texture, is made from durable, sustainable pandan. Its minimalist design is perfect for everyday elegance, fitting seamlessly into your conscious lifestyle.</p>
-        <img id="wallet-image" src="wallet_on_table.jpeg" alt="Wallet on Table" style="width: 100%; max-width: 600px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-    </section>
-
     <section id="story" class="craftsmanship" style="background:#f4f0e6; padding: 60px 20px; text-align: center;">
         <h2 style="font-family: 'Playfair Display', serif; color: #1a4d3d; font-size: 2.5rem; margin-bottom: 20px;">A Story Woven with Care</h2>
-        <p style="font-size: 1.1rem; color: #333; max-width: 800px; margin: 0 auto 30px;">Our journey begins in the heart of Thailand, where skilled artisans handcraft each Marc Wellington wallet. We are committed to reviving traditional techniques, using sustainable materials like pandan to create products that are as kind to the earth as they are beautiful.</p>
+        <p style="font-size: 1.1rem; color: #333; max-width: 800px; margin: 0 auto 30px;">At Marc Wellington, our journey begins with a deep respect for tradition, sustainability, and thoughtful craftsmanship. We are driven by a mission to bring beautifully designed, eco-conscious goods to a global audience—pieces that don't just look good, but do good. Each product is a collaboration with local artisans who carry generations of knowledge and skill.</p>
+        <p style="font-size: 1.1rem; color: #333; max-width: 800px; margin: 0 auto 30px;">Our story is rooted in connection—between cultures, between people, and between the past and a more sustainable future.</p>
         <div class="craftsmanship-images" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
             <img src="WomanFlax.jpg" alt="Lady Weaving Wallet 1" style="width: 100%; max-width: 300px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
             <img src="WomanFlax2.jpg" alt="Lady Weaving Wallet 2" style="width: 100%; max-width: 300px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
             <img src="WomanFlax3.jpg" alt="Lady Weaving Wallet 3" style="width: 100%; max-width: 300px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
         </div>
-        <p style="font-size: 1.1rem; color: #333; max-width: 800px; margin: 30px auto 0;">By choosing the Marc Wellington Wallet, you're not just selecting a stylish accessory; you're supporting local communities and preserving the rich heritage of Thai craftsmanship.</p>
     </section>
+
+    <section id="product" class="product-context" style="background:#f4f0e6; padding: 60px 20px; text-align: center;">
+        <h2 style="font-family: 'Playfair Display', serif; color: #1a4d3d; font-size: 2.5rem; margin-bottom: 20px;">Where Nature Meets Craftsmanship</h2>
+        <p style="font-size: 1.1rem; color: #333; max-width: 800px; margin: 0 auto 30px;">The wallets from Marc Wellington are a celebration of refined simplicity and environmental integrity. Crafted from durable, sustainable pandan, their distinctive woven texture speaks to a tradition of care and craftsmanship. Designed with minimalist elegance, they fit seamlessly into the lifestyle of those who value both timeless style and conscious living.</p>
+        <img id="wallet-image" src="wallet_on_table.jpeg" alt="Wallet on Table" style="width: 100%; max-width: 600px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    </section>
+
 
     <section class="eco-friendly" style="background:#f4f0e6; padding: 60px 20px; text-align: center;">
         <h2 style="font-family: 'Playfair Display', serif; color: #1a4d3d; font-size: 2.5rem; margin-bottom: 20px;">Eco-Friendly from the Ground Up</h2>
@@ -244,6 +245,20 @@
         </div>
     </section>
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const emailCaptureButton = document.querySelector('.cta-button');
+        const signupSection = document.getElementById('signup');
+
+        if (emailCaptureButton && signupSection) {
+            emailCaptureButton.addEventListener('click', function () {
+                signupSection.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        }
+    });
+</script>
 <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';fnames[6]='COMPANY';ftypes[6]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
 
     <footer style="background: #ede1cb; text-align: center; padding: 20px; color: #444;">
