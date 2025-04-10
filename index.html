@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raksa Wallets</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 20px 60px;
+            text-align: center;
+            background: #f1ead8;
+            position: relative;
+            overflow: hidden;
+        }
+        .pattern-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://i.ibb.co/FkRQKwG0/Background-Pattern.png') repeat;
+            background-size: auto;
+            mask-image: linear-gradient(to bottom, black 0%, transparent 75%);
+            -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 75%);
+            z-index: 0;
+            opacity: 0.8;
+        }
+        .pattern-overlay::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+        .content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        p.description {
+            font-size: 1rem;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+        .cta-button {
+            background-color: #1a4d3d;
+            color: white;
+            border: none;
+            border-radius: 40px;
+            padding: 14px 28px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 20px;
+            z-index: 1;
+            position: relative;
+        }
+        .wallet-image {
+            height: auto;
+            position: relative;
+            z-index: 1;
+            margin-top: 140px;
+            transform: scale(0.32);
+        }
+        @media (min-width: 768px) {
+            .hero {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 120px 80px 60px;
+                text-align: left;
+                background: #ede1cb;
+            }
+            .pattern-overlay {
+                height: 100%;
+                background: url('https://i.ibb.co/FkRQKwG0/Background-Pattern.png') repeat;
+                background-size: auto;
+                mask-image: linear-gradient(to bottom, black 0%, transparent 75%);
+                -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 75%);
+                opacity: 0.8;
+            }
+            .pattern-overlay::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.65);
+                z-index: 1;
+            }
+            .content {
+                position: relative;
+                z-index: 2;
+                max-width: 50%;
+                margin-bottom: 0;
+                margin-top: -540px;
+            }
+            h1 {
+                font-size: 5rem;
+                color: #fff;
+            }
+            p.description {
+                font-size: 1.2rem;
+                color: #fff;
+            }
+            .cta-button {
+                font-size: 1.1rem;
+                padding: 16px 32px;
+                color: #fff;
+            }
+            .wallet-image {
+                transform: scale(1.10);
+            }
+        }
+
+        /* Mobile specific styles */
+        @media (max-width: 767px) {
+            .hero {
+                flex-direction: column;
+                padding: 80px 20px 60px;
+                text-align: center;
+                background: #ede1cb;
+            }
+            .pattern-overlay {
+                height: 75%;
+                background-size: cover;
+                mask-image: none;
+                -webkit-mask-image: none;
+            }
+            .pattern-overlay::after {
+                background-color: rgba(0, 0, 0, 0.25);
+            }
+            .content {
+                position: relative;
+                z-index: 2;
+                max-width: 100%;
+                margin-bottom: 20px;
+                padding-top: 10px;
+            }
+            h1 {
+                font-size: 3rem;
+                color: #fff;
+            }
+            p.description {
+                font-size: 1.1rem;
+                color: #fff;
+                text-align: center;
+            }
+            .cta-button {
+                font-size: 1rem;
+                padding: 14px 28px;
+                color: #fff;
+                margin: 20px auto;
+                display: block;
+                text-align: center;
+            }
+            .wallet-image {
+                transform: scale(1.2);
+                width: 90%;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="pattern-overlay"></div>
+        <div class="content">
+            <h1>Embrace Sustainable Style</h1>
+            <p class="description">Handcrafted with natural pandan. Raksa Wallets are a testament to timeless elegance and ecoconscious living.</p>
+            <p class="description">Sign up for email updates to receive a 20% discount code when shipping starts!</p>
+            <button class="cta-button">Get Email Updates</button>
+        </div>
+        <img class="wallet-image" src="https://i.ibb.co/hJZkzSSg/Wallet-On-Stand.png" alt="Wallet on stand">
+    </section>
+
+    <section id="product" class="product-context" style="background:#f4f0e6; padding: 60px 20px; text-align: center;">
+        <h2 style="font-family: 'Playfair Display', serif; color: #1a4d3d; font-size: 2.5rem; margin-bottom: 20px;">Where Nature Meets Craftsmanship</h2>
+        <p style="font-size: 1.1rem; color: #333; max-width: 800px; margin: 0 auto 30px;">Imagine a wallet that not only complements your style but also honors the planet. The Raksa Wallet, with its unique woven texture, is made from durable, sustainable pandan. Its minimalist design is perfect for everyday elegance, fitting seamlessly into your conscious lifestyle.</p>
+        <img id="wallet-image" src="https://i.ibb.co/9Hg4j2sC/Version-1.jpg" alt="Raksa Hemp Wallet on Table" style="width: 100%; max-width: 600px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    </section>
+
+    <section id="story" class="craftsmanship" style="background:#f4f0e6; padding: 60px 20px; text-align: center;">
+        <h2 style="font-family: 'Playfair Display', serif; color: #1a4d3d; font-size: 2.5rem; margin-bottom: 20px;">A Story Woven with Care</h2>
+        <p style="font-size: 1.1rem; color: #333; max-width: 800px; margin: 0 auto 30px;">Our journey begins in the heart of Thailand, where skilled artisans handcraft each Raksa wallet. We are committed to reviving traditional techniques, using sustainable materials like pandan to create products that are as kind to the earth as they are beautiful.</p>
+        <div class="craftsmanship-images" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+            <img src="https://i.ibb.co/35rPcWb4/Screenshot-2025-04-07-at-17-14-31-Instagram.png" alt="Lady Weaving Raksa Wallet 1" style="width: 100%; max-width: 300px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <img src="https://i.ibb.co/b59M3VhT/Screenshot-2025-04-07-at-17-14-25-Instagram.png" alt="Lady Weaving Raksa Wallet 2" style="width: 100%; max-width: 300px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <img src="https://i.ibb.co/99vnRV5c/Screenshot-2025-04-07-at-17-14-13-Instagram.png" alt="Lady Weaving Raksa Wallet 3" style="width: 100%; max-width: 300px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        </div>
+        <p style="font-size: 1.1rem; color: #333; max-width: 800px; margin: 30px auto 0;">By choosing the Raksa Wallet, you're not just selecting a stylish accessory; you're supporting local communities and preserving the rich heritage of Thai craftsmanship.</p>
+    </section>
+
+    <section class="eco-friendly" style="background:#f4f0e6; padding: 60px 20px; text-align: center;">
+        <h2 style="font-family: 'Playfair Display', serif; color: #1a4d3d; font-size: 2.5rem; margin-bottom: 20px;">Eco-Friendly from the Ground Up</h2>
+        <p style="font-size: 1.1rem; color: #333; max-width: 800px; margin: 0 auto 30px;">Pandan is a wonder plant – naturally robust, fast-growing, and requires minimal resources. It's a sustainable choice that helps reduce our environmental footprint. Our commitment to eco-friendly practices extends beyond materials, ensuring that every step of our production process is mindful of the planet.</p>
+        <ul style="list-style-type: disc; color: #333; font-size: 1.1rem; text-align: left; max-width: 800px; margin: 0 auto; padding-left: 20px;">
+            <li>Naturally Sustainable Pandan</li>
+            <li>Biodegradable Materials</li>
+            <li>Supporting Ethical Craftsmanship</li>
+        </ul>
+    </section>
+
+    <section id="signup" class="signup" style="background:#f1ead8; padding: 60px 20px; text-align: center;">
+        <h2 style="font-family: 'Playfair Display', serif; color: #1a4d3d; font-size: 2.5rem; margin-bottom: 20px;">Join Our Sustainable Journey</h2>
+        <p style="font-size: 1.1rem; color: #333; max-width: 800px; margin: 0 auto 30px;">Be the first to know about our new collections, exclusive offers, and the stories behind our handcrafted products. Join our community of conscious consumers today!</p>
+        <div id="mc_embed_shell">
+            <div id="mc_embed_signup" style="background: none !important;">
+              <form action="https://hotmail.us11.list-manage.com/subscribe/post?u=4fe757ac9616f81d5cbd3a854&amp;id=2c97d1bd3e&amp;f_id=00ab9be1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" style="display: flex; flex-direction: column; align-items: center;">
+                    <div id="mc_embed_signup_scroll" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+                        <div class="mc-field-group" style="margin-bottom: 10px; width: 100%; max-width: 400px;">
+                            <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required value="" placeholder="Email Address" style="padding: 14px; width: 100%; border-radius: 30px; border: 1px solid #ccc;">
+                        </div>
+                        <div class="clear foot" style="display: flex; justify-content: center; width: 100%;">
+                            <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe" style="margin-top: 0px; background-color: #1a4d3d; color: #fff; padding: 14px 28px; border: none; border-radius: 30px; cursor: pointer;">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';fnames[6]='COMPANY';ftypes[6]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
+
+    <footer style="background: #ede1cb; text-align: center; padding: 20px; color: #444;">
+        <p>&copy; 2023 Raksa. All Rights Reserved. | <a href="/privacy" style="color: #1a4d3d; text-decoration: none;">Privacy Policy</a> | <a href="/terms" style="color: #1a4d3d; text-decoration: none;">Terms of Service</a></p>
+    </footer>
+</body>
+</html>
