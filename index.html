@@ -121,16 +121,49 @@
         /* Hero Section */
         .hero {
             min-height: 90vh;
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             align-items: center;
+            gap: 4rem;
             padding: 120px 2rem 60px;
-            background: linear-gradient(135deg, var(--dark-cream) 0%, var(--cream) 100%);
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
         .hero-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .hero-image {
+            position: relative;
+            height: 600px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .hero-image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(26, 77, 61, 0.9), transparent);
+            padding: 2rem;
+            color: var(--white);
+        }
+
+        .hero-image-overlay p {
+            margin: 0;
+            font-size: 0.95rem;
+            font-style: italic;
         }
 
         .hero-badge {
@@ -165,7 +198,7 @@
         .cta-group {
             display: flex;
             gap: 1rem;
-            justify-content: center;
+            justify-content: flex-start;
             flex-wrap: wrap;
             margin-top: 2rem;
         }
@@ -493,9 +526,23 @@
                 font-size: 1.1rem;
             }
 
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 100px 2rem 60px;
+            }
+
+            .hero-container {
+                text-align: center;
+            }
+
+            .hero-image {
+                height: 400px;
+            }
+
             .cta-group {
                 flex-direction: column;
                 align-items: center;
+                justify-content: center;
             }
 
             .cta-primary,
@@ -536,6 +583,14 @@
             <div class="cta-group">
                 <a href="#contact" class="cta-primary">Become a Partner</a>
                 <a href="#how-it-works" class="cta-secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <!-- Replace the src below with your own image URL -->
+            <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800&auto=format&fit=crop" 
+                 alt="Thai artisan crafting handmade products">
+            <div class="hero-image-overlay">
+                <p>Connecting Thai craftsmanship with European markets</p>
             </div>
         </div>
     </section>
